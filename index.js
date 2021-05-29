@@ -14,7 +14,7 @@
 //   console.log(`Starting app with ${port}`)
 // })
 
-//----- Mongodb one
+//----- With mongodb
 const express = require('express')
 const mongoose = require('mongoose')
 
@@ -23,13 +23,13 @@ const app = express()
 
 app.use(express.json())
 
-//database connect
+//database connect (please update this as per your computer)
 mongoose.connect('mongodb://localhost:27017/cartpractice', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
 
-// Schema
+// Schema (you can change as you want)
 const Cart = mongoose.model('Cart', {
   itemName: String,
   itemPrice: Number,
